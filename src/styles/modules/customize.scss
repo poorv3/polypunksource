@@ -1,0 +1,202 @@
+@import "./defines.scss";
+
+// Transitions
+a,
+.link,
+button,
+.Punkard,
+.tab {
+    cursor: pointer;
+    transition: all 0.08s !important;
+}
+
+// --Transitions
+
+// Base
+
+* {
+    @include font-author_regular;
+    // scrollbar-width: none;
+}
+
+div,
+a,
+button,
+p,
+section,
+main,
+nav,
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    * {
+        color: #000;
+    }
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.c- {
+    width: 100%;
+}
+
+i,
+.icon {
+    line-height: 100%;
+}
+
+// -- Base
+
+// Elements
+a,
+.link,
+button {
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &:hover:before {
+        opacity: 0.1;
+    }
+}
+
+// -- Elements
+
+// Libs
+// > Swiper
+.custome_swiper {
+    flex-direction: row;
+
+    .swiper-wrapper {
+        flex-direction: row;
+
+        .swiper-slide {
+            width: auto !important;
+        }
+    }
+}
+
+// > Swal2
+.swal-box {
+    border-radius: 30px !important;
+    display: flex !important;
+
+    &.-big {
+        width: 50em;
+    }
+}
+
+.swal--head {
+    text-align: left;
+}
+
+.swal--title {
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.swal--content {
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+.swal-closebtn {
+    position: absolute;
+    right: 0;
+    margin: 14px !important;
+    border-radius: 100px !important;
+    border: none !important;
+    color: #000 !important;
+}
+.swal2-actions {
+    flex-direction: row;
+    button {
+        border-radius: 100px !important;
+    }
+}
+
+.swal-box {
+    .wallets {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .wallet {
+            padding: 8px 12px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 20px 20px 0;
+
+            &.-selected {
+                background-color: #ddd;
+            }
+
+            .logo {
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .filter_section {
+        margin-bottom: 12px;
+        width: 100%;
+
+        >.title {
+            @include font-author_bold;
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        >.checklist {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .CheckBox {
+                width: 33%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// -- Libs
+
+@media screen and(max-width : 700px) {
+    .swal {
+        .filter_section {
+
+            >.title {
+                font-size: 16px;
+            }
+
+            >.checklist {
+
+                .CheckBox {
+                    width: 50%;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

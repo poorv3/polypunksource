@@ -1,0 +1,65 @@
+// Colors
+$c_primary: #7e3dce;
+$c_secondary: #f6d346;
+
+$c_black: #000000;
+
+$i_link: #000000;
+// --Colors
+
+
+
+// Fonts
+@mixin font-author_light {
+    font-family: 'author-light' !important;
+
+    * {
+        font-family: 'author-light' !important;
+    }
+}
+
+@mixin font-author_regular {
+    font-family: 'author-regular' !important;
+
+    * {
+        font-family: 'author-regular' !important;
+    }
+}
+
+@mixin font-author_bold {
+    font-family: 'author-black' !important;
+
+    * {
+        font-family: 'author-bold' !important;
+    }
+}
+
+
+@font-face {
+    font-family: 'author-light';
+    src: url('../../assets/fonts/author/Author-Extralight.eot');
+    src: url('../../assets/fonts/author/Author-Extralight.eot') format('embedded-opentype'),
+        url('../../assets/fonts/author/Author-Extralight.woff2') format('woff2'),
+        url('../../assets/fonts/author/Author-Extralight.woff') format('woff'),
+        url('../../assets/fonts/author/Author-Extralight.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'author-regular';
+    src: url('../../assets/fonts/author/Author-Medium.eot');
+    src: url('../../assets/fonts/author/Author-Medium.eot') format('embedded-opentype'),
+        url('../../assets/fonts/author/Author-Medium.woff2') format('woff2'),
+        url('../../assets/fonts/author/Author-Medium.woff') format('woff'),
+        url('../../assets/fonts/author/Author-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'author-bold';
+    src: url('../../assets/fonts/author/Author-Bold.eot');
+    src: url('../../assets/fonts/author/Author-Bold.eot') format('embedded-opentype'),
+        url('../../assets/fonts/author/Author-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/author/Author-Bold.woff') format('woff'),
+        url('../../assets/fonts/author/Author-Bold.ttf') format('truetype'),
+}
+
+// --Fonts
